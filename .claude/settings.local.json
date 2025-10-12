@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(rm:*)",
-      "mcp__sequential-thinking-tools__sequentialthinking_tools"
-    ],
-    "deny": []
-  }
-}
