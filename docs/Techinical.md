@@ -53,7 +53,7 @@ UltraTranslate is a Chrome extension that provides multi-API translation capabil
 
 ### Dark Theme UI
 - Modern OpenAI-inspired dark theme design
-- Color scheme: #202123 background with #10a37f accent
+- Color scheme: #202123 background with #14B8A6 accent
 - Improved readability and reduced eye strain
 - Professional appearance with smooth transitions
 
@@ -78,9 +78,9 @@ Supports 9 interface languages:
 ### Preserve Original Text
 When enabled, displays both original and translated text:
 - Original text shown with reduced opacity (0.7)
-- Translation highlighted with green accent (#10a37f)
+- Translated text inherits original styling with subtle background tint
 - Subtle background highlight for better visibility
-- Maintains document structure
+- Maintains document structure and visual consistency
 
 ### Auto-Translate
 - Automatically translates pages when loaded

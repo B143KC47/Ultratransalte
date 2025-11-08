@@ -2580,12 +2580,12 @@ function applyOverlayStyles(overlay, originalText, translatedText, video, contai
         font-weight: 400;
     `;
     
-    // Translated text styles
+    // Translated text styles - inherit white color for video subtitles
     translatedText.style.cssText = `
-        color: #10a37f;
-        font-weight: 600;
+        color: rgba(255, 255, 255, 0.95);
+        font-weight: 500;
         font-size: ${fontSize}px;
-        text-shadow: 
+        text-shadow:
             2px 2px 6px rgba(0, 0, 0, 1),
             -1px -1px 3px rgba(0, 0, 0, 1),
             1px -1px 3px rgba(0, 0, 0, 1),

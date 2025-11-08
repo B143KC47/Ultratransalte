@@ -1146,7 +1146,7 @@ async function loadSettings() {
         // Appearance settings
         document.getElementById('translation-style').value = settings.translationStyle || 'highlight';
         document.getElementById('enable-container-effects').checked = settings.enableContainerEffects !== false;
-        document.getElementById('translation-color').value = settings.translationColor || '#10a37f';
+        document.getElementById('translation-color').value = settings.translationColor || '#64748B';
         document.getElementById('font-size').value = settings.fontSize || 100;
         document.getElementById('opacity').value = settings.opacity || 60;
         handleFontSizeChange();
@@ -1409,16 +1409,19 @@ function updatePreview() {
         preview.classList.remove('no-container');
     }
 
-    // Apply custom color
+    // Apply custom color as subtle background tint
     const translatedSpan = preview.querySelector('.ultra-translate-translated');
     if (translatedSpan) {
-        if (enableContainerEffects) {
-            translatedSpan.style.borderLeftColor = translationColor;
-            translatedSpan.style.color = '';
-        } else {
-            translatedSpan.style.color = translationColor;
-            translatedSpan.style.borderLeftColor = '';
-        }
+        // Convert hex color to rgba with low opacity for subtle background
+        const hex = translationColor.replace('#', '');
+        const r = parseInt(hex.substr(0, 2), 16);
+        const g = parseInt(hex.substr(2, 2), 16);
+        const b = parseInt(hex.substr(4, 2), 16);
+        const bgColor = `rgba(${r}, ${g}, ${b}, 0.08)`;
+
+        translatedSpan.style.backgroundColor = bgColor;
+        translatedSpan.style.color = 'inherit';
+        translatedSpan.style.borderLeftColor = '';
     }
 
     // Apply font size
@@ -1591,7 +1594,7 @@ function loadSitePreferences(promptedSites) {
         const siteInfo = document.createElement('div');
         siteInfo.innerHTML = `
             <strong>${hostname}</strong>
-            <span style="margin-left: 10px; color: ${prefs.action === 'always' ? '#10a37f' : '#666'};">
+            <span style="margin-left: 10px; color: ${prefs.action === 'always' ? '#14B8A6' : '#666'};">
                 ${prefs.action === 'always' ? getMessage('alwaysTranslate') : getMessage('neverTranslate')}
             </span>
         `;

@@ -27,8 +27,14 @@
     display: block;
     color: inherit;
     font-weight: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
     line-height: inherit;
     unicode-bidi: embed;
+    /* Subtle background highlight to distinguish translated content */
+    background-color: rgba(100, 116, 139, 0.05);
+    padding: 0 2px;
+    border-radius: 2px;
 }
 
 /* RTL support for translated text */
@@ -94,10 +100,10 @@ a .ultra-translate-translated {
     text-decoration: inherit;
 }
 
-/* Dark mode - simple color change */
+/* Dark mode - adjust background highlight for better visibility */
 @media (prefers-color-scheme: dark) {
     .ultra-translate-translated {
-        color: #5EEAD4;
+        background-color: rgba(148, 163, 184, 0.08);
     }
 }
 
@@ -118,7 +124,8 @@ a .ultra-translate-translated {
 /* Accessibility: High contrast mode support */
 @media (prefers-contrast: high) {
     .ultra-translate-translated {
-        font-weight: 500;
+        font-weight: inherit;
+        background-color: rgba(100, 116, 139, 0.15);
     }
 }
 
@@ -298,19 +305,25 @@ a .ultra-translate-translated {
 
 /* No container effects mode - now default behavior */
 body.ultra-no-container .ultra-translate-translated {
-    color: var(--ultra-translation-color, #14B8A6);
-    font-weight: 500;
+    /* Inherit color from original text, use subtle background instead */
+    color: inherit;
+    font-weight: inherit;
+    background-color: rgba(100, 116, 139, 0.08);
 }
 
 /* Preserve subtle hover effect even without container */
 body.ultra-no-container .ultra-translate-translated:hover {
-    opacity: 0.8;
+    background-color: rgba(100, 116, 139, 0.12);
     transform: none;
 }
 
 /* Dark mode support for no-container */
 @media (prefers-color-scheme: dark) {
     body.ultra-no-container .ultra-translate-translated {
-        color: var(--ultra-translation-color, #5EEAD4);
+        background-color: rgba(148, 163, 184, 0.1);
+    }
+
+    body.ultra-no-container .ultra-translate-translated:hover {
+        background-color: rgba(148, 163, 184, 0.15);
     }
 }
