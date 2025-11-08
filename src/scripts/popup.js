@@ -444,6 +444,12 @@ async function loadQuickSettings() {
             videoCheck.checked = settings.videoSubtitles;
         }
 
+        // Apply theme (with system preference detection)
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const defaultTheme = systemPrefersDark ? 'dark' : 'light';
+        const theme = settings.interfaceTheme || defaultTheme;
+        document.documentElement.setAttribute('data-theme', theme);
+
         updateInterfaceLanguage(settings.interfaceLanguage);
     } catch (error) {
         console.error('Error loading settings:', error);

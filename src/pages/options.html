@@ -119,10 +119,11 @@
 
                     <div class="setting-item" id="model-selection-section" style="display: none;">
                         <label for="model-name" data-i18n="modelName">Model:</label>
-                        <select id="model-name">
+                        <input type="text" id="model-name" list="model-options" placeholder="Select or type a model name">
+                        <datalist id="model-options">
                             <!-- Options will be populated dynamically based on selected API -->
-                        </select>
-                        <small id="model-help" data-i18n="modelHelp">Select the model to use for translation</small>
+                        </datalist>
+                        <small id="model-help" data-i18n="modelHelp">Select from the list or type a custom model name</small>
                     </div>
 
                     <div class="api-links">
@@ -279,12 +280,75 @@
                     <h3 data-i18n="stylePreview">Translation Style Preview</h3>
                     <div class="preview-container">
                         <div class="preview-sample">
-                            <div class="preview-text">
-                                <span data-i18n="previewOriginalText">This is a sample text to demonstrate translation styling.</span>
+                            <!-- Paragraph Example -->
+                            <div class="preview-element">
+                                <div class="preview-label" data-i18n="previewParagraph">Paragraph:</div>
+                                <p id="preview-paragraph" class="preview-content">
+                                    <span class="ultra-translate-wrapper ultra-translate-block-wrapper">
+                                        <span class="ultra-translate-original" data-i18n="previewOriginalText">This is a sample text to demonstrate translation styling.</span>
+                                        <span class="ultra-translate-translated" data-i18n="previewTranslatedText">这是一个演示翻译样式的示例文本。</span>
+                                    </span>
+                                </p>
                             </div>
-                            <div id="preview-translated" class="preview-translation">
-                                <span class="ultra-translate-original" data-i18n="previewOriginalText">This is a sample text to demonstrate translation styling.</span>
-                                <span class="ultra-translate-translated" data-i18n="previewTranslatedText">这是一个演示翻译样式的示例文本。</span>
+
+                            <!-- Heading Example -->
+                            <div class="preview-element">
+                                <div class="preview-label" data-i18n="previewHeading">Heading:</div>
+                                <h3 id="preview-heading" class="preview-content">
+                                    <span class="ultra-translate-wrapper ultra-translate-block-wrapper">
+                                        <span class="ultra-translate-original" data-i18n="previewHeadingText">Welcome to UltraTranslate</span>
+                                        <span class="ultra-translate-translated" data-i18n="previewHeadingTranslated">欢迎使用 UltraTranslate</span>
+                                    </span>
+                                </h3>
+                            </div>
+
+                            <!-- Inline Text Example -->
+                            <div class="preview-element">
+                                <div class="preview-label" data-i18n="previewInline">Inline Text:</div>
+                                <p id="preview-inline" class="preview-content">
+                                    <span data-i18n="previewInlinePrefix">You can translate </span>
+                                    <span class="ultra-translate-wrapper">
+                                        <span class="ultra-translate-original" data-i18n="previewInlineOriginal">inline text</span>
+                                        <span class="ultra-translate-separator"> | </span>
+                                        <span class="ultra-translate-translated" data-i18n="previewInlineTranslated">内联文本</span>
+                                    </span>
+                                    <span data-i18n="previewInlineSuffix"> seamlessly.</span>
+                                </p>
+                            </div>
+
+                            <!-- List Example -->
+                            <div class="preview-element">
+                                <div class="preview-label" data-i18n="previewList">List Items:</div>
+                                <ul id="preview-list" class="preview-content">
+                                    <li>
+                                        <span class="ultra-translate-wrapper">
+                                            <span class="ultra-translate-original" data-i18n="previewListItem1">First item</span>
+                                            <span class="ultra-translate-separator"> | </span>
+                                            <span class="ultra-translate-translated" data-i18n="previewListItem1Translated">第一项</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="ultra-translate-wrapper">
+                                            <span class="ultra-translate-original" data-i18n="previewListItem2">Second item</span>
+                                            <span class="ultra-translate-separator"> | </span>
+                                            <span class="ultra-translate-translated" data-i18n="previewListItem2Translated">第二项</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Link Example -->
+                            <div class="preview-element">
+                                <div class="preview-label" data-i18n="previewLink">Link:</div>
+                                <p id="preview-link-container" class="preview-content">
+                                    <a href="#" id="preview-link" onclick="return false;">
+                                        <span class="ultra-translate-wrapper">
+                                            <span class="ultra-translate-original" data-i18n="previewLinkText">Click here</span>
+                                            <span class="ultra-translate-separator"> | </span>
+                                            <span class="ultra-translate-translated" data-i18n="previewLinkTranslated">点击这里</span>
+                                        </span>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -301,9 +365,12 @@
                 </div>
 
                 <div class="setting-item">
-                    <label for="translation-color" data-i18n="translationColor">Translation Highlight Color:</label>
-                    <input type="color" id="translation-color" value="#64748B">
-                    <small data-i18n="translationColorDesc">Subtle background tint for translated text</small>
+                    <label for="interface-theme" data-i18n="interfaceTheme">Interface Theme:</label>
+                    <select id="interface-theme">
+                        <option value="light" data-i18n="themeLight">Light Theme</option>
+                        <option value="dark" data-i18n="themeDark">Dark Theme</option>
+                    </select>
+                    <small data-i18n="themeDesc">Choose between light and dark color schemes</small>
                 </div>
 
                 <div class="setting-item">

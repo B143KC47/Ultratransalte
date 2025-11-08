@@ -20,7 +20,7 @@ const translations = {
         apiHelp: 'Get your API key from the provider\'s website',
         apiProviders: 'API Providers:',
         modelName: 'Model:',
-        modelHelp: 'Select the model to use for translation',
+        modelHelp: 'Select from the list or type a custom model name',
         customPrompt: 'Custom Translation Prompt:',
         customPromptPlaceholder: 'Enter custom prompt for AI translation (e.g., "Translate to {language} keeping technical terms, be concise and natural")',
         customPromptDesc: 'Only works with DeepSeek, OpenAI, Gemini and Qwen APIs. Use {language} as placeholder for target language.',
@@ -35,7 +35,6 @@ const translations = {
         styleUnderline: 'Underline',
         styleBubble: 'Bubble',
         styleSideBySide: 'Side by Side',
-        translationColor: 'Translation Color:',
         fontSize: 'Font Size Adjustment:',
         originalOpacity: 'Original Text Opacity:',
         cacheManagement: 'Cache Management',
@@ -106,8 +105,29 @@ const translations = {
         stylePreviewDesc: 'Preview how translations will appear on pages',
         enableContainerEffects: 'Enable Container Effects',
         containerEffectsDesc: 'Add background, border, and shadow to translations',
+        interfaceTheme: 'Interface Theme:',
+        themeLight: 'Light Theme',
+        themeDark: 'Dark Theme',
+        themeDesc: 'Choose between light and dark color schemes',
         previewOriginalText: 'This is a sample text to demonstrate translation styling.',
-        previewTranslatedText: '这是一个演示翻译样式的示例文本。'
+        previewTranslatedText: '这是一个演示翻译样式的示例文本。',
+        previewParagraph: 'Paragraph',
+        previewHeading: 'Heading',
+        previewHeadingText: 'Welcome to UltraTranslate',
+        previewHeadingTranslated: '欢迎使用 UltraTranslate',
+        previewInline: 'Inline Text',
+        previewInlinePrefix: 'You can translate ',
+        previewInlineOriginal: 'inline text',
+        previewInlineTranslated: '内联文本',
+        previewInlineSuffix: ' seamlessly.',
+        previewList: 'List Items',
+        previewListItem1: 'First item',
+        previewListItem1Translated: '第一项',
+        previewListItem2: 'Second item',
+        previewListItem2Translated: '第二项',
+        previewLink: 'Link',
+        previewLinkText: 'Click here',
+        previewLinkTranslated: '点击这里'
     },
     'zh-CN': {
         settingsTitle: '超级翻译 设置',
@@ -129,7 +149,7 @@ const translations = {
         apiHelp: '从提供商网站获取API密钥',
         apiProviders: 'API提供商：',
         modelName: '模型：',
-        modelHelp: '选择要用于翻译的模型',
+        modelHelp: '从列表中选择或输入自定义模型名称',
         customPrompt: '自定义翻译提示词：',
         customPromptPlaceholder: '输入AI翻译的自定义提示词（例如："翻译成{语言}，保留专业术语，简洁自然"）',
         customPromptDesc: '仅适用于DeepSeek、OpenAI、Gemini和Qwen API。使用{language}作为目标语言占位符。',
@@ -144,7 +164,6 @@ const translations = {
         styleUnderline: '下划线',
         styleBubble: '气泡',
         styleSideBySide: '并排',
-        translationColor: '翻译颜色：',
         fontSize: '字体大小调整：',
         originalOpacity: '原文透明度：',
         cacheManagement: '缓存管理',
@@ -215,8 +234,29 @@ const translations = {
         stylePreviewDesc: '预览翻译在页面上的显示效果',
         enableContainerEffects: '启用容器特效',
         containerEffectsDesc: '为翻译添加背景、边框和阴影',
+        interfaceTheme: '界面主题：',
+        themeLight: '浅色主题',
+        themeDark: '深色主题',
+        themeDesc: '在浅色和深色配色方案之间选择',
         previewOriginalText: '这是一个演示翻译样式的示例文本。',
-        previewTranslatedText: 'This is a sample text to demonstrate translation styling.'
+        previewTranslatedText: 'This is a sample text to demonstrate translation styling.',
+        previewParagraph: '段落',
+        previewHeading: '标题',
+        previewHeadingText: '欢迎使用 UltraTranslate',
+        previewHeadingTranslated: 'Welcome to UltraTranslate',
+        previewInline: '内联文本',
+        previewInlinePrefix: '您可以翻译',
+        previewInlineOriginal: '内联文本',
+        previewInlineTranslated: 'inline text',
+        previewInlineSuffix: '无缝衔接。',
+        previewList: '列表项',
+        previewListItem1: '第一项',
+        previewListItem1Translated: 'First item',
+        previewListItem2: '第二项',
+        previewListItem2Translated: 'Second item',
+        previewLink: '链接',
+        previewLinkText: '点击这里',
+        previewLinkTranslated: 'Click here'
     },
     'zh-TW': {
         settingsTitle: '超級翻譯 設定',
@@ -238,7 +278,7 @@ const translations = {
         apiHelp: '從提供商網站獲取API金鑰',
         apiProviders: 'API提供商：',
         modelName: '模型：',
-        modelHelp: '選擇要用於翻譯的模型',
+        modelHelp: '從列表中選擇或輸入自訂模型名稱',
         customPrompt: '自訂翻譯提示詞：',
         customPromptPlaceholder: '輸入AI翻譯的自訂提示詞（例如："翻譯成{語言}，保留專業術語，簡潔自然"）',
         customPromptDesc: '僅適用於DeepSeek、OpenAI、Gemini和Qwen API。使用{language}作為目標語言佔位符。',
@@ -253,7 +293,6 @@ const translations = {
         styleUnderline: '底線',
         styleBubble: '氣泡',
         styleSideBySide: '並排',
-        translationColor: '翻譯顏色：',
         fontSize: '字體大小調整：',
         originalOpacity: '原文透明度：',
         cacheManagement: '快取管理',
@@ -324,8 +363,29 @@ const translations = {
         stylePreviewDesc: '預覽翻譯在頁面上的顯示效果',
         enableContainerEffects: '啟用容器特效',
         containerEffectsDesc: '為翻譯添加背景、邊框和陰影',
+        interfaceTheme: '介面主題：',
+        themeLight: '淺色主題',
+        themeDark: '深色主題',
+        themeDesc: '在淺色和深色配色方案之間選擇',
         previewOriginalText: '這是一個演示翻譯樣式的示例文字。',
-        previewTranslatedText: 'This is a sample text to demonstrate translation styling.'
+        previewTranslatedText: 'This is a sample text to demonstrate translation styling.',
+        previewParagraph: '段落',
+        previewHeading: '標題',
+        previewHeadingText: '歡迎使用 UltraTranslate',
+        previewHeadingTranslated: 'Welcome to UltraTranslate',
+        previewInline: '內聯文字',
+        previewInlinePrefix: '您可以翻譯',
+        previewInlineOriginal: '內聯文字',
+        previewInlineTranslated: 'inline text',
+        previewInlineSuffix: '無縫銜接。',
+        previewList: '列表項',
+        previewListItem1: '第一項',
+        previewListItem1Translated: 'First item',
+        previewListItem2: '第二項',
+        previewListItem2Translated: 'Second item',
+        previewLink: '連結',
+        previewLinkText: '點擊這裡',
+        previewLinkTranslated: 'Click here'
     },
     'ja': {
         settingsTitle: 'ウルトラ翻訳 設定',
@@ -347,7 +407,7 @@ const translations = {
         apiHelp: 'プロバイダーのウェブサイトからAPIキーを取得',
         apiProviders: 'APIプロバイダー：',
         modelName: 'モデル：',
-        modelHelp: '翻訳に使用するモデルを選択',
+        modelHelp: 'リストから選択するか、カスタムモデル名を入力',
         customPrompt: 'カスタム翻訳プロンプト：',
         customPromptPlaceholder: 'AI翻訳のカスタムプロンプトを入力（例："{language}に翻訳し、専門用語を保持し、簡潔で自然にする"）',
         customPromptDesc: 'DeepSeek、OpenAI、Gemini、Qwen APIでのみ動作します。{language}をターゲット言語のプレースホルダーとして使用します。',
@@ -362,7 +422,6 @@ const translations = {
         styleUnderline: '下線',
         styleBubble: 'バブル',
         styleSideBySide: '並列',
-        translationColor: '翻訳の色：',
         fontSize: 'フォントサイズ調整：',
         originalOpacity: '原文の不透明度：',
         cacheManagement: 'キャッシュ管理',
@@ -433,8 +492,29 @@ const translations = {
         stylePreviewDesc: 'ページ上での翻訳の表示をプレビュー',
         enableContainerEffects: 'コンテナエフェクトを有効にする',
         containerEffectsDesc: '翻訳に背景、枠線、シャドウを追加',
+        interfaceTheme: 'インターフェーステーマ：',
+        themeLight: 'ライトテーマ',
+        themeDark: 'ダークテーマ',
+        themeDesc: 'ライトとダークの配色を選択',
         previewOriginalText: 'これは翻訳スタイルを示すサンプルテキストです。',
-        previewTranslatedText: 'This is a sample text to demonstrate translation styling.'
+        previewTranslatedText: 'This is a sample text to demonstrate translation styling.',
+        previewParagraph: '段落',
+        previewHeading: '見出し',
+        previewHeadingText: 'UltraTranslateへようこそ',
+        previewHeadingTranslated: 'Welcome to UltraTranslate',
+        previewInline: 'インラインテキスト',
+        previewInlinePrefix: '翻訳できます',
+        previewInlineOriginal: 'インラインテキスト',
+        previewInlineTranslated: 'inline text',
+        previewInlineSuffix: 'シームレスに。',
+        previewList: 'リスト項目',
+        previewListItem1: '最初の項目',
+        previewListItem1Translated: 'First item',
+        previewListItem2: '2番目の項目',
+        previewListItem2Translated: 'Second item',
+        previewLink: 'リンク',
+        previewLinkText: 'ここをクリック',
+        previewLinkTranslated: 'Click here'
     },
     'ko': {
         settingsTitle: '울트라 번역 설정',
@@ -456,7 +536,7 @@ const translations = {
         apiHelp: '제공업체 웹사이트에서 API 키 받기',
         apiProviders: 'API 제공업체:',
         modelName: '모델:',
-        modelHelp: '번역에 사용할 모델 선택',
+        modelHelp: '목록에서 선택하거나 사용자 정의 모델 이름 입력',
         customPrompt: '커스텀 번역 프롬프트:',
         customPromptPlaceholder: 'AI 번역을 위한 커스텀 프롬프트 입력 (예: "{language}로 번역하고, 기술 용어를 유지하며, 간결하고 자연스럽게")',
         customPromptDesc: 'DeepSeek, OpenAI, Gemini, Qwen API에서만 작동합니다. {language}를 대상 언어 자리 표시자로 사용합니다.',
@@ -471,7 +551,6 @@ const translations = {
         styleUnderline: '밑줄',
         styleBubble: '버블',
         styleSideBySide: '나란히',
-        translationColor: '번역 색상:',
         fontSize: '글꼴 크기 조정:',
         originalOpacity: '원문 투명도:',
         cacheManagement: '캐시 관리',
@@ -542,8 +621,29 @@ const translations = {
         stylePreviewDesc: '페이지에서 번역이 어떻게 표시되는지 미리보기',
         enableContainerEffects: '컨테이너 효과 활성화',
         containerEffectsDesc: '번역에 배경, 테두리, 그림자 추가',
+        interfaceTheme: '인터페이스 테마：',
+        themeLight: '라이트 테마',
+        themeDark: '다크 테마',
+        themeDesc: '라이트와 다크 색상 구성표 중 선택',
         previewOriginalText: '번역 스타일을 보여주기 위한 샘플 텍스트입니다.',
-        previewTranslatedText: 'This is a sample text to demonstrate translation styling.'
+        previewTranslatedText: 'This is a sample text to demonstrate translation styling.',
+        previewParagraph: '단락',
+        previewHeading: '제목',
+        previewHeadingText: 'UltraTranslate에 오신 것을 환영합니다',
+        previewHeadingTranslated: 'Welcome to UltraTranslate',
+        previewInline: '인라인 텍스트',
+        previewInlinePrefix: '번역할 수 있습니다 ',
+        previewInlineOriginal: '인라인 텍스트',
+        previewInlineTranslated: 'inline text',
+        previewInlineSuffix: ' 원활하게.',
+        previewList: '목록 항목',
+        previewListItem1: '첫 번째 항목',
+        previewListItem1Translated: 'First item',
+        previewListItem2: '두 번째 항목',
+        previewListItem2Translated: 'Second item',
+        previewLink: '링크',
+        previewLinkText: '여기를 클릭',
+        previewLinkTranslated: 'Click here'
     },
     'es': {
         settingsTitle: 'Configuración de UltraTraducir',
@@ -565,7 +665,7 @@ const translations = {
         apiHelp: 'Obtenga su clave API del sitio web del proveedor',
         apiProviders: 'Proveedores de API:',
         modelName: 'Modelo:',
-        modelHelp: 'Seleccione el modelo a usar para traducción',
+        modelHelp: 'Seleccione de la lista o escriba un nombre de modelo personalizado',
         customPrompt: 'Prompt de traducción personalizado:',
         customPromptPlaceholder: 'Ingrese prompt personalizado para traducción AI (ej: "Traduce a {language} manteniendo términos técnicos, sé conciso y natural")',
         customPromptDesc: 'Solo funciona con las API de DeepSeek, OpenAI, Gemini y Qwen. Use {language} como marcador de posición para el idioma de destino.',
@@ -580,7 +680,6 @@ const translations = {
         styleUnderline: 'Subrayado',
         styleBubble: 'Burbuja',
         styleSideBySide: 'Lado a lado',
-        translationColor: 'Color de traducción:',
         fontSize: 'Ajuste de tamaño de fuente:',
         originalOpacity: 'Opacidad del texto original:',
         cacheManagement: 'Gestión de caché',
@@ -651,8 +750,29 @@ const translations = {
         stylePreviewDesc: 'Vista previa de cómo aparecerán las traducciones en las páginas',
         enableContainerEffects: 'Habilitar efectos de contenedor',
         containerEffectsDesc: 'Agregar fondo, borde y sombra a las traducciones',
+        interfaceTheme: 'Tema de interfaz:',
+        themeLight: 'Tema claro',
+        themeDark: 'Tema oscuro',
+        themeDesc: 'Elegir entre esquemas de color claro y oscuro',
         previewOriginalText: 'Este es un texto de muestra para demostrar el estilo de traducción.',
-        previewTranslatedText: 'This is a sample text to demonstrate translation styling.'
+        previewTranslatedText: 'This is a sample text to demonstrate translation styling.',
+        previewParagraph: 'Párrafo',
+        previewHeading: 'Encabezado',
+        previewHeadingText: 'Bienvenido a UltraTranslate',
+        previewHeadingTranslated: 'Welcome to UltraTranslate',
+        previewInline: 'Texto en línea',
+        previewInlinePrefix: 'Puedes traducir ',
+        previewInlineOriginal: 'texto en línea',
+        previewInlineTranslated: 'inline text',
+        previewInlineSuffix: ' sin problemas.',
+        previewList: 'Elementos de lista',
+        previewListItem1: 'Primer elemento',
+        previewListItem1Translated: 'First item',
+        previewListItem2: 'Segundo elemento',
+        previewListItem2Translated: 'Second item',
+        previewLink: 'Enlace',
+        previewLinkText: 'Haz clic aquí',
+        previewLinkTranslated: 'Click here'
     },
     'fr': {
         settingsTitle: 'Paramètres de UltraTraduction',
@@ -674,7 +794,7 @@ const translations = {
         apiHelp: 'Obtenez votre clé API depuis le site du fournisseur',
         apiProviders: 'Fournisseurs d\'API:',
         modelName: 'Modèle:',
-        modelHelp: 'Sélectionnez le modèle à utiliser pour la traduction',
+        modelHelp: 'Sélectionnez dans la liste ou saisissez un nom de modèle personnalisé',
         customPrompt: 'Prompt de traduction personnalisé:',
         customPromptPlaceholder: 'Entrez un prompt personnalisé pour la traduction IA (ex: "Traduis en {language} en conservant les termes techniques, sois concis et naturel")',
         customPromptDesc: 'Fonctionne uniquement avec les API DeepSeek, OpenAI, Gemini et Qwen. Utilisez {language} comme espace réservé pour la langue cible.',
@@ -689,7 +809,6 @@ const translations = {
         styleUnderline: 'Soulignement',
         styleBubble: 'Bulle',
         styleSideBySide: 'Côte à côte',
-        translationColor: 'Couleur de traduction:',
         fontSize: 'Ajustement de la taille de police:',
         originalOpacity: 'Opacité du texte original:',
         cacheManagement: 'Gestion du cache',
@@ -760,8 +879,29 @@ const translations = {
         stylePreviewDesc: 'Aperçu de l\'apparence des traductions sur les pages',
         enableContainerEffects: 'Activer les effets de conteneur',
         containerEffectsDesc: 'Ajouter un arrière-plan, une bordure et une ombre aux traductions',
+        interfaceTheme: 'Thème de l\'interface :',
+        themeLight: 'Thème clair',
+        themeDark: 'Thème sombre',
+        themeDesc: 'Choisir entre les schémas de couleurs clair et sombre',
         previewOriginalText: 'Ceci est un texte d\'exemple pour démontrer le style de traduction.',
-        previewTranslatedText: 'This is a sample text to demonstrate translation styling.'
+        previewTranslatedText: 'This is a sample text to demonstrate translation styling.',
+        previewParagraph: 'Paragraphe',
+        previewHeading: 'En-tête',
+        previewHeadingText: 'Bienvenue sur UltraTranslate',
+        previewHeadingTranslated: 'Welcome to UltraTranslate',
+        previewInline: 'Texte en ligne',
+        previewInlinePrefix: 'Vous pouvez traduire ',
+        previewInlineOriginal: 'texte en ligne',
+        previewInlineTranslated: 'inline text',
+        previewInlineSuffix: ' de manière transparente.',
+        previewList: 'Éléments de liste',
+        previewListItem1: 'Premier élément',
+        previewListItem1Translated: 'First item',
+        previewListItem2: 'Deuxième élément',
+        previewListItem2Translated: 'Second item',
+        previewLink: 'Lien',
+        previewLinkText: 'Cliquez ici',
+        previewLinkTranslated: 'Click here'
     },
     'de': {
         settingsTitle: 'UltraÜbersetzer Einstellungen',
@@ -783,7 +923,7 @@ const translations = {
         apiHelp: 'Holen Sie sich Ihren API-Schlüssel von der Website des Anbieters',
         apiProviders: 'API-Anbieter:',
         modelName: 'Modell:',
-        modelHelp: 'Wählen Sie das Modell für die Übersetzung',
+        modelHelp: 'Wählen Sie aus der Liste oder geben Sie einen benutzerdefinierten Modellnamen ein',
         customPrompt: 'Benutzerdefinierter Übersetzungsprompt:',
         customPromptPlaceholder: 'Geben Sie einen benutzerdefinierten Prompt für die KI-Übersetzung ein (z.B.: "Übersetze nach {language}, behalte technische Begriffe bei, sei prägnant und natürlich")',
         customPromptDesc: 'Funktioniert nur mit den APIs von DeepSeek, OpenAI, Gemini und Qwen. Verwenden Sie {language} als Platzhalter für die Zielsprache.',
@@ -798,7 +938,6 @@ const translations = {
         styleUnderline: 'Unterstrichen',
         styleBubble: 'Blase',
         styleSideBySide: 'Nebeneinander',
-        translationColor: 'Übersetzungsfarbe:',
         fontSize: 'Schriftgrößenanpassung:',
         originalOpacity: 'Deckkraft des Originaltexts:',
         cacheManagement: 'Cache-Verwaltung',
@@ -869,8 +1008,29 @@ const translations = {
         stylePreviewDesc: 'Vorschau, wie Übersetzungen auf Seiten erscheinen werden',
         enableContainerEffects: 'Containereffekte aktivieren',
         containerEffectsDesc: 'Hintergrund, Rand und Schatten zu Übersetzungen hinzufügen',
+        interfaceTheme: 'Oberflächenthema:',
+        themeLight: 'Helles Thema',
+        themeDark: 'Dunkles Thema',
+        themeDesc: 'Zwischen hellen und dunklen Farbschemata wählen',
         previewOriginalText: 'Dies ist ein Beispieltext zur Demonstration des Übersetzungsstils.',
-        previewTranslatedText: 'This is a sample text to demonstrate translation styling.'
+        previewTranslatedText: 'This is a sample text to demonstrate translation styling.',
+        previewParagraph: 'Absatz',
+        previewHeading: 'Überschrift',
+        previewHeadingText: 'Willkommen bei UltraTranslate',
+        previewHeadingTranslated: 'Welcome to UltraTranslate',
+        previewInline: 'Inline-Text',
+        previewInlinePrefix: 'Sie können ',
+        previewInlineOriginal: 'Inline-Text',
+        previewInlineTranslated: 'inline text',
+        previewInlineSuffix: ' nahtlos übersetzen.',
+        previewList: 'Listenelemente',
+        previewListItem1: 'Erstes Element',
+        previewListItem1Translated: 'First item',
+        previewListItem2: 'Zweites Element',
+        previewListItem2Translated: 'Second item',
+        previewLink: 'Link',
+        previewLinkText: 'Hier klicken',
+        previewLinkTranslated: 'Click here'
     },
     'ru': {
         settingsTitle: 'Настройки УльтраПеревод',
@@ -892,7 +1052,7 @@ const translations = {
         apiHelp: 'Получите API ключ с сайта поставщика',
         apiProviders: 'Поставщики API:',
         modelName: 'Модель:',
-        modelHelp: 'Выберите модель для перевода',
+        modelHelp: 'Выберите из списка или введите пользовательское имя модели',
         customPrompt: 'Пользовательский промпт перевода:',
         customPromptPlaceholder: 'Введите пользовательский промпт для AI перевода (например: "Переведи на {language}, сохраняя технические термины, будь кратким и естественным")',
         customPromptDesc: 'Работает только с API DeepSeek, OpenAI, Gemini и Qwen. Используйте {language} как заполнитель для целевого языка.',
@@ -907,7 +1067,6 @@ const translations = {
         styleUnderline: 'Подчеркивание',
         styleBubble: 'Пузырь',
         styleSideBySide: 'Рядом',
-        translationColor: 'Цвет перевода:',
         fontSize: 'Регулировка размера шрифта:',
         originalOpacity: 'Прозрачность оригинального текста:',
         cacheManagement: 'Управление кэшем',
@@ -978,8 +1137,29 @@ const translations = {
         stylePreviewDesc: 'Предпросмотр того, как переводы будут выглядеть на страницах',
         enableContainerEffects: 'Включить эффекты контейнера',
         containerEffectsDesc: 'Добавить фон, границу и тень к переводам',
+        interfaceTheme: 'Тема интерфейса:',
+        themeLight: 'Светлая тема',
+        themeDark: 'Тёмная тема',
+        themeDesc: 'Выбрать между светлой и тёмной цветовыми схемами',
         previewOriginalText: 'Это образец текста для демонстрации стиля перевода.',
-        previewTranslatedText: 'This is a sample text to demonstrate translation styling.'
+        previewTranslatedText: 'This is a sample text to demonstrate translation styling.',
+        previewParagraph: 'Абзац',
+        previewHeading: 'Заголовок',
+        previewHeadingText: 'Добро пожаловать в UltraTranslate',
+        previewHeadingTranslated: 'Welcome to UltraTranslate',
+        previewInline: 'Встроенный текст',
+        previewInlinePrefix: 'Вы можете переводить ',
+        previewInlineOriginal: 'встроенный текст',
+        previewInlineTranslated: 'inline text',
+        previewInlineSuffix: ' без проблем.',
+        previewList: 'Элементы списка',
+        previewListItem1: 'Первый элемент',
+        previewListItem1Translated: 'First item',
+        previewListItem2: 'Второй элемент',
+        previewListItem2Translated: 'Second item',
+        previewLink: 'Ссылка',
+        previewLinkText: 'Нажмите здесь',
+        previewLinkTranslated: 'Click here'
     }
 };
 
@@ -1039,6 +1219,7 @@ function setupEventListeners() {
     document.getElementById('api-key').addEventListener('blur', saveSettings);
     document.getElementById('toggle-api-key').addEventListener('click', toggleApiKeyVisibility);
     document.getElementById('model-name').addEventListener('change', saveSettings);
+    document.getElementById('model-name').addEventListener('blur', saveSettings);
     
     // Translation settings
     document.getElementById('custom-prompt').addEventListener('blur', saveSettings);
@@ -1050,13 +1231,10 @@ function setupEventListeners() {
     // Appearance settings
     document.getElementById('translation-style').addEventListener('change', saveSettings);
     document.getElementById('enable-container-effects').addEventListener('change', handleContainerEffectsChange);
-    document.getElementById('translation-color').addEventListener('change', () => {
-        updatePreview();
-        saveSettings();
-    });
+    document.getElementById('interface-theme').addEventListener('change', handleThemeChange);
     document.getElementById('font-size').addEventListener('input', handleFontSizeChange);
     document.getElementById('opacity').addEventListener('input', handleOpacityChange);
-    
+
     // Advanced settings
     document.getElementById('clear-cache').addEventListener('click', clearCache);
     document.getElementById('cache-expiry').addEventListener('change', saveSettings);
@@ -1129,9 +1307,9 @@ async function loadSettings() {
         // Load model name after API change populates the options
         if (settings.modelName) {
             setTimeout(() => {
-                const modelSelect = document.getElementById('model-name');
-                if (modelSelect && Array.from(modelSelect.options).some(opt => opt.value === settings.modelName)) {
-                    modelSelect.value = settings.modelName;
+                const modelInput = document.getElementById('model-name');
+                if (modelInput) {
+                    modelInput.value = settings.modelName;
                 }
             }, 100);
         }
@@ -1146,13 +1324,20 @@ async function loadSettings() {
         // Appearance settings
         document.getElementById('translation-style').value = settings.translationStyle || 'highlight';
         document.getElementById('enable-container-effects').checked = settings.enableContainerEffects !== false;
-        document.getElementById('translation-color').value = settings.translationColor || '#64748B';
+
+        // Load and apply theme (with system preference detection)
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const defaultTheme = systemPrefersDark ? 'dark' : 'light';
+        const theme = settings.interfaceTheme || defaultTheme;
+        document.getElementById('interface-theme').value = theme;
+        applyTheme(theme);
+
         document.getElementById('font-size').value = settings.fontSize || 100;
         document.getElementById('opacity').value = settings.opacity || 60;
         handleFontSizeChange();
         handleOpacityChange();
         updatePreview();
-        
+
         // Advanced settings
         document.getElementById('cache-expiry').value = settings.cacheExpiry || 24;
         document.getElementById('debug-mode').checked = settings.debugMode || false;
@@ -1230,10 +1415,10 @@ async function saveSettings() {
         // Appearance
         translationStyle: document.getElementById('translation-style').value,
         enableContainerEffects: document.getElementById('enable-container-effects').checked,
-        translationColor: document.getElementById('translation-color').value,
+        interfaceTheme: document.getElementById('interface-theme').value,
         fontSize: parseInt(document.getElementById('font-size').value),
         opacity: parseInt(document.getElementById('opacity').value),
-        
+
         // Advanced
         cacheExpiry: parseInt(document.getElementById('cache-expiry').value),
         debugMode: document.getElementById('debug-mode').checked,
@@ -1303,27 +1488,37 @@ function handleApiChange() {
 
 // Populate model options based on selected API
 function populateModelOptions(api) {
-    const modelSelect = document.getElementById('model-name');
-    modelSelect.innerHTML = '';
-    
+    const modelInput = document.getElementById('model-name');
+    const modelDatalist = document.getElementById('model-options');
+    modelDatalist.innerHTML = '';
+
     let models = [];
+    let defaultModel = '';
+
     switch(api) {
         case 'deepseek':
+            defaultModel = 'deepseek-chat';
             models = [
                 { value: 'deepseek-chat', text: 'DeepSeek Chat (Default)' },
                 { value: 'deepseek-coder', text: 'DeepSeek Coder' }
             ];
             break;
         case 'openai':
+            defaultModel = 'gpt-4o-mini';
             models = [
-                { value: 'gpt-3.5-turbo', text: 'GPT-3.5 Turbo (Default)' },
+                { value: 'gpt-4o-mini', text: 'GPT-4o Mini (Default)' },
+                { value: 'gpt-3.5-turbo', text: 'GPT-3.5 Turbo' },
                 { value: 'gpt-4', text: 'GPT-4' },
                 { value: 'gpt-4-turbo', text: 'GPT-4 Turbo' },
                 { value: 'gpt-4o', text: 'GPT-4o' },
-                { value: 'gpt-4o-mini', text: 'GPT-4o Mini' }
+                { value: 'glm-4-air', text: 'GLM-4-Air (OpenAI-compatible, Cost-effective)' },
+                { value: 'glm-4-airx', text: 'GLM-4-AirX (OpenAI-compatible, 2.6x faster)' },
+                { value: 'glm-4', text: 'GLM-4 (OpenAI-compatible)' },
+                { value: 'glm-4-plus', text: 'GLM-4-Plus (OpenAI-compatible)' }
             ];
             break;
         case 'gemini':
+            defaultModel = 'gemini-1.5-flash';
             models = [
                 { value: 'gemini-1.5-flash', text: 'Gemini 1.5 Flash (Default)' },
                 { value: 'gemini-1.5-flash-8b', text: 'Gemini 1.5 Flash 8B' },
@@ -1332,6 +1527,7 @@ function populateModelOptions(api) {
             ];
             break;
         case 'qwen':
+            defaultModel = 'qwen-plus';
             models = [
                 { value: 'qwen-plus', text: 'Qwen Plus (Default)' },
                 { value: 'qwen-max', text: 'Qwen Max' },
@@ -1340,18 +1536,21 @@ function populateModelOptions(api) {
             ];
             break;
     }
-    
+
+    // Populate datalist with options
     models.forEach(model => {
         const option = document.createElement('option');
         option.value = model.value;
         option.textContent = model.text;
-        modelSelect.appendChild(option);
+        modelDatalist.appendChild(option);
     });
-    
-    // Load saved model if exists
+
+    // Load saved model if exists, otherwise use default
     chrome.storage.sync.get(['modelName'], (result) => {
-        if (result.modelName && Array.from(modelSelect.options).some(opt => opt.value === result.modelName)) {
-            modelSelect.value = result.modelName;
+        if (result.modelName) {
+            modelInput.value = result.modelName;
+        } else {
+            modelInput.value = defaultModel;
         }
     });
 }
@@ -1392,46 +1591,65 @@ function handleContainerEffectsChange() {
     saveSettings();
 }
 
+// Apply theme to document
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Handle theme change
+function handleThemeChange() {
+    const theme = document.getElementById('interface-theme').value;
+    applyTheme(theme);
+    saveSettings();
+}
+
 // Update preview based on settings
 function updatePreview() {
-    const preview = document.getElementById('preview-translated');
-    if (!preview) return;
+    // Get all preview elements
+    const previewElements = [
+        'preview-paragraph',
+        'preview-heading',
+        'preview-inline',
+        'preview-list',
+        'preview-link-container'
+    ];
 
     const enableContainerEffects = document.getElementById('enable-container-effects').checked;
-    const translationColor = document.getElementById('translation-color').value;
     const fontSize = document.getElementById('font-size').value;
     const opacity = document.getElementById('opacity').value;
 
-    // Apply container effects class
-    if (!enableContainerEffects) {
-        preview.classList.add('no-container');
-    } else {
-        preview.classList.remove('no-container');
-    }
+    // Apply settings to all preview elements
+    previewElements.forEach(elementId => {
+        const element = document.getElementById(elementId);
+        if (!element) return;
 
-    // Apply custom color as subtle background tint
-    const translatedSpan = preview.querySelector('.ultra-translate-translated');
-    if (translatedSpan) {
-        // Convert hex color to rgba with low opacity for subtle background
-        const hex = translationColor.replace('#', '');
-        const r = parseInt(hex.substr(0, 2), 16);
-        const g = parseInt(hex.substr(2, 2), 16);
-        const b = parseInt(hex.substr(4, 2), 16);
-        const bgColor = `rgba(${r}, ${g}, ${b}, 0.08)`;
+        // Apply font size to container
+        element.style.fontSize = fontSize + '%';
 
-        translatedSpan.style.backgroundColor = bgColor;
-        translatedSpan.style.color = 'inherit';
-        translatedSpan.style.borderLeftColor = '';
-    }
+        // Apply settings to all translated spans in this element
+        const translatedSpans = element.querySelectorAll('.ultra-translate-translated');
+        translatedSpans.forEach(span => {
+            if (enableContainerEffects) {
+                // With container effects: show default styling from CSS
+                span.style.backgroundColor = '';
+                span.style.color = 'inherit';
+                span.style.padding = '2px 4px';
+                span.style.borderRadius = '3px';
+            } else {
+                // Without container effects: no visual indicators
+                span.style.backgroundColor = 'transparent';
+                span.style.color = 'inherit';
+                span.style.padding = '0';
+                span.style.borderRadius = '0';
+            }
+        });
 
-    // Apply font size
-    preview.style.fontSize = fontSize + '%';
-
-    // Apply opacity to original
-    const originalSpan = preview.querySelector('.ultra-translate-original');
-    if (originalSpan) {
-        originalSpan.style.opacity = opacity / 100;
-    }
+        // Apply opacity to all original spans in this element
+        const originalSpans = element.querySelectorAll('.ultra-translate-original');
+        originalSpans.forEach(span => {
+            span.style.opacity = opacity / 100;
+        });
+    });
 }
 
 // Update cache size

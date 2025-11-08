@@ -2,6 +2,47 @@
    Modern Minimalist Design - Clean & Simple UI
    ============================================= */
 
+/* Theme Variables */
+:root {
+    /* Light Theme Colors */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F9FAFB;
+    --bg-hover: #F3F4F6;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --text-tertiary: #9CA3AF;
+    --border-primary: #E5E7EB;
+    --border-secondary: #D1D5DB;
+    --accent-primary: #14B8A6;
+    --accent-hover: #0D9488;
+    --accent-light: #CCFBF1;
+    --success: #10B981;
+    --error: #EF4444;
+    --warning: #F59E0B;
+    --shadow-sm: rgba(0, 0, 0, 0.05);
+    --shadow-md: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    /* Dark Theme Colors */
+    --bg-primary: #2d2d2d;
+    --bg-secondary: #242424;
+    --bg-hover: #3a3a3a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #808080;
+    --border-primary: #404040;
+    --border-secondary: #4a4a4a;
+    --accent-primary: #14B8A6;
+    --accent-hover: #0D9488;
+    --accent-light: #1a4d47;
+    --success: #10B981;
+    --error: #EF4444;
+    --warning: #F59E0B;
+    --shadow-sm: rgba(0, 0, 0, 0.3);
+    --shadow-md: rgba(0, 0, 0, 0.5);
+}
+
 /* Base Styles */
 * {
     box-sizing: border-box;
@@ -12,11 +53,12 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif;
-    background: #FFFFFF;
-    color: #1F2937;
+    background: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .popup-container {
@@ -30,12 +72,12 @@ body {
     align-items: center;
     margin-bottom: 24px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid var(--border-primary);
 }
 
 h2 {
     margin: 0;
-    color: #1F2937;
+    color: var(--text-primary);
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.025em;
@@ -44,7 +86,7 @@ h2 {
 /* Settings Button */
 .settings-btn {
     background: transparent;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border-primary);
     font-size: 16px;
     cursor: pointer;
     padding: 6px 8px;
@@ -55,25 +97,25 @@ h2 {
     align-items: center;
     justify-content: center;
     line-height: 1;
-    color: #6B7280;
+    color: var(--text-secondary);
     min-width: 32px;
     height: 32px;
 }
 
 .settings-btn:hover {
-    background: #F9FAFB;
-    border-color: #D1D5DB;
-    color: #374151;
+    background: var(--bg-secondary);
+    border-color: var(--border-secondary);
+    color: var(--text-primary);
 }
 
 .settings-btn:active {
-    background: #F3F4F6;
+    background: var(--bg-hover);
 }
 
 /* Translation Status Section */
 .translation-status {
-    background: #F0FDFA;
-    border: 1px solid #14B8A6;
+    background: var(--accent-light);
+    border: 1px solid var(--accent-primary);
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 20px;
@@ -90,16 +132,16 @@ h2 {
     gap: 8px;
     margin-bottom: 12px;
     font-size: 14px;
-    color: #374151;
+    color: var(--text-primary);
 }
 
 .status-icon {
     font-size: 16px;
-    color: #10B981;
+    color: var(--success);
 }
 
 .translation-info strong {
-    color: #047857;
+    color: var(--accent-primary);
     font-weight: 500;
 }
 
@@ -107,9 +149,9 @@ h2 {
 .toggle-view-btn {
     width: 100%;
     padding: 10px 16px;
-    background: #FFFFFF;
-    color: #14B8A6;
-    border: 1px solid #14B8A6;
+    background: var(--bg-primary);
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
     border-radius: 6px;
     font-size: 14px;
     font-weight: 500;
@@ -118,7 +160,7 @@ h2 {
 }
 
 .toggle-view-btn:hover {
-    background: #14B8A6;
+    background: var(--accent-primary);
     color: #FFFFFF;
 }
 
@@ -146,7 +188,7 @@ h2 {
 
 .quick-setting label {
     display: block;
-    color: #374151;
+    color: var(--text-primary);
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 8px;
@@ -156,9 +198,9 @@ h2 {
 .quick-setting select {
     width: 100%;
     padding: 10px 12px;
-    background: #FFFFFF;
-    color: #1F2937;
-    border: 1px solid #D1D5DB;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-secondary);
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
@@ -171,12 +213,12 @@ h2 {
 }
 
 .quick-setting select:hover {
-    border-color: #9CA3AF;
+    border-color: var(--text-tertiary);
 }
 
 .quick-setting select:focus {
     outline: none;
-    border-color: #14B8A6;
+    border-color: var(--accent-primary);
     box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
 }
 
@@ -186,9 +228,9 @@ h2 {
     flex-direction: column;
     gap: 12px;
     padding: 16px;
-    background: #F9FAFB;
+    background: var(--bg-secondary);
     border-radius: 8px;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border-primary);
 }
 
 .toggle-label {
@@ -196,12 +238,12 @@ h2 {
     align-items: center;
     cursor: pointer;
     font-size: 14px;
-    color: #374151;
+    color: var(--text-primary);
     transition: color 0.2s ease;
 }
 
 .toggle-label:hover {
-    color: #1F2937;
+    color: var(--text-primary);
 }
 
 .toggle-label input[type="checkbox"] {
@@ -209,7 +251,7 @@ h2 {
     width: 16px;
     height: 16px;
     cursor: pointer;
-    accent-color: #14B8A6;
+    accent-color: var(--accent-primary);
 }
 
 /* Action Buttons */
@@ -233,14 +275,14 @@ button {
 
 /* Primary Button */
 .primary-btn {
-    background: #14B8A6;
+    background: var(--accent-primary);
     color: white;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 var(--shadow-sm);
 }
 
 .primary-btn:hover:not(:disabled) {
-    background: #0D9488;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: var(--accent-hover);
+    box-shadow: 0 4px 6px -1px var(--shadow-md);
     transform: translateY(-1px);
 }
 
@@ -255,19 +297,19 @@ button {
 
 /* Secondary Button */
 .secondary-btn {
-    background: #FFFFFF;
-    color: #6B7280;
-    border: 1px solid #D1D5DB;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-secondary);
 }
 
 .secondary-btn:hover:not(:disabled) {
-    background: #F9FAFB;
-    border-color: #9CA3AF;
-    color: #374151;
+    background: var(--bg-secondary);
+    border-color: var(--text-tertiary);
+    color: var(--text-primary);
 }
 
 .secondary-btn:active:not(:disabled) {
-    background: #F3F4F6;
+    background: var(--bg-hover);
 }
 
 .secondary-btn:disabled {
@@ -281,11 +323,11 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px;
-    background: #F9FAFB;
+    background: var(--bg-secondary);
     border-radius: 6px;
     font-size: 12px;
-    color: #6B7280;
-    border: 1px solid #E5E7EB;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-primary);
 }
 
 .api-indicator {
@@ -295,13 +337,13 @@ button {
 
 .api-indicator::before {
     content: "●";
-    color: #10B981;
+    color: var(--success);
     margin-right: 6px;
     font-size: 8px;
 }
 
 .api-indicator.offline::before {
-    color: #EF4444;
+    color: var(--error);
 }
 
 .cache-indicator {
@@ -311,7 +353,7 @@ button {
 }
 
 #cache-count {
-    color: #14B8A6;
+    color: var(--accent-primary);
     font-weight: 500;
 }
 
@@ -339,16 +381,16 @@ button {
 
 #quick-status-message.success {
     display: block;
-    background: #ECFDF5;
-    color: #047857;
-    border: 1px solid #10B981;
+    background: var(--accent-light);
+    color: var(--accent-primary);
+    border: 1px solid var(--success);
 }
 
 #quick-status-message.error {
     display: block;
-    background: #FEF2F2;
-    color: #B91C1C;
-    border: 1px solid #EF4444;
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error);
+    border: 1px solid var(--error);
 }
 
 /* Utility Classes */
@@ -358,7 +400,7 @@ button {
 
 /* Focus Visible */
 *:focus-visible {
-    outline: 2px solid #14B8A6;
+    outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
 }
 
